@@ -1,6 +1,8 @@
 # Reciply 🍳
 _A smarter way to cook, plan, and share_
 
+## View on web: https://andrew-ih.github.io/Reciply/
+
 ## Purpose
 
 **Reciply** is a user-focused mobile app built to make cooking more enjoyable, less stressful, and beautifully organized. Whether you’re a beginner trying to follow your first recipe, a parent juggling meals for the week, or someone tracking your health goals, Reciply brings everything together in one place.
