@@ -81,12 +81,16 @@
 
             <h2>Intended Users</h3>
             <p>
-                Reciply is designed for food enthusiasts of all skill levels — from home cooks looking for everyday inspiration to culinary adventurers eager to try global cuisines. Whether you're meal prepping, managing dietary preferences, or just exploring new ideas, Reciply supports your cooking journey.
+                Reciply is designed for food enthusiasts of all skill levels from home cooks looking for everyday 
+                inspiration to culinary adventurers eager to try global cuisines. Whether you're meal prepping, managing 
+                dietary preferences, or just exploring new ideas, Reciply supports your cooking journey.
             </p>
 
             <h2>Overview of Major Functionality</h3>
             <p>
-                The app allows users to browse curated recipe collections, save personal favorites, customize dietary filters, and share dishes with friends. Additional features include step-by-step instructions, ingredient substitution tips, and the ability to upload and organize personal recipes.
+                The app allows users to browse curated recipe collections, save personal favorites, customize dietary filters,
+                and share dishes with friends. Additional features include step-by-step instructions, ingredient substitution 
+                tips, and the ability to upload and organize personal recipes.
             </p>
             </section>
 
@@ -144,84 +148,170 @@
 
             <!-- POSTMORTEM & RETROSPECTIVE SECTION -->
             <section id="postmortem">
-            <h2>Postmortem & Retrospective</h2>
-            <p>Below is a reflection on our development process, addressing key questions:</p>
-            <ul>
-                <li>
-                <strong>Overall Architecture:</strong> We adopted a layered architecture separating the
-                front-end (using a modern UI framework) from the back-end (using RESTful APIs and a
-                database). This approach allowed each layer to be developed and tested independently.
-                </li>
-                <li>
-                <strong>What Went Right:</strong> Agile practices (daily stand-ups, scrums, pair
-                programming) enabled quick identification of issues and faster iteration. Frequent
-                communication helped us meet deadlines and stay on track with our user stories.
-                </li>
-                <li>
-                <strong>What Went Wrong:</strong> Early on, merging conflicts and inconsistent coding
-                styles caused delays. We resolved this by implementing a strict branching strategy and
-                style guidelines, but it cost us valuable time.
-                </li>
-                <li>
-                <strong>What We Would Do Differently:</strong> We would invest more time in design and
-                prototyping before coding. Setting up robust continuous integration testing earlier would
-                also reduce bugs slipping through the cracks.
-                </li>
-                <li>
-                <strong>Project Size & Quantifiables:</strong> The project includes about 50 methods and
-                18 classes in total. Around 40% are devoted to UI and front-end functionality, 40% to
-                back-end logic and data handling, and 20% to testing and utility classes. Each team
-                member contributed approximately 15–20 hours per week.
-                </li>
-                <li>
-                <strong>Time Spent & Surprises:</strong> UI polishing took the most time due to frequent
-                user feedback and design tweaks. Implementing the recipe search feature was surprisingly
-                quick once the back-end was structured properly.
-                </li>
-                <li>
-                <strong>Design Smells or Brilliant Decisions:</strong> Our decision to keep data models
-                lightweight and flexible turned out great for quickly iterating on new features. However,
-                we occasionally found ourselves duplicating validation logic between front-end and
-                back-end, which we consider a minor design smell.
-                </li>
-                <li>
-                <strong>Outstanding Bugs:</strong> We have a rare edge case where certain special
-                characters in recipe names cause display issues. We’re planning a patch to address it in
-                a future release.
-                </li>
-                <li>
-                <strong>Features That Exceeded Expectations:</strong> The user-generated shopping list
-                feature quickly became a favorite, garnering positive feedback for its ease of use and
-                time-saving capabilities.
-                </li>
-                <li>
-                <strong>Extra Technologies Used:</strong> We integrated a cloud-based testing service for
-                device simulation, which wasn't strictly required but helped expedite QA on multiple
-                platforms.
-                </li>
-                <li>
-                <strong>Specific Techniques:</strong> We practiced TDD for core functionalities,
-                conducted pair programming for complex features, and held scrums twice a week to maintain
-                alignment.
-                </li>
-                <li>
-                <strong>Project Changes from Iteration 0:</strong> Our initial vision was mostly
-                maintained, though we added user profile features based on feedback and shifted some
-                priorities (e.g., the shopping list tool rose to higher importance).
-                </li>
-                <li>
-                <strong>Lessons Learned About Team Development:</strong> We learned that transparent
-                communication and frequent code reviews are crucial. Next time, we'll start with stronger
-                style guidelines, keep daily stand-ups short but frequent, and maintain an updated
-                product backlog to avoid scope creep.
-                </li>
-                <li>
-                <strong>Conclusions:</strong> Building Reciply confirmed the importance of an iterative
-                approach, robust testing, and strong teamwork. Focusing on the user experience from the
-                start proved vital for delivering a product that genuinely simplifies cooking and recipe
-                management.
-                </li>
-            </ul>
+                <h2>Postmortem & Retrospective</h2>
+                <p>Below is a reflection on our development process, addressing key questions:</p>
+                
+                <!-- What Went Right Section -->
+                <article id="what-went-right">
+                <h2>1. What Went Right</h2>
+                    <p>
+                        The development process of our <strong>Reciply</strong> app was a collaborative effort that resulted in several successful 
+                        outcomes. Through thorough planning and careful implementation of key features, we were able to deliver a 
+                        functional and scalable application.
+                    </p>
+                
+                    <h4>Application Structure and Planning</h4>
+                    <ul>
+                        <li>    
+                            One of the things that contributed to our success was our application structure and careful planning. 
+                            From the beginning, we chose to use the <strong>3-layer architecture</strong> consisting of the presentation, business, 
+                            and persistence layers. This approach enabled us to split the tasks evenly within our group and take 
+                            responsibility for each of the layers assigned to them which effectively maintains a clear codebase and
+                            a clear understanding of each of our responsibilities. Furthermore, carefully breaking down features 
+                            into smaller ones such as user stories, and breaking it down further into developer tasks, has significantly 
+                            impacted our task management in a more efficient and positive way. This led to a comprehensive understanding 
+                            of individual tasks to be given out that does not lead to developer task conflicts as this is one of the main 
+                            problems that arise during a professional software development cycle. Each of the developers knows which layer 
+                            they’re working on and knows what tasks to do, which leads to a smooth development process without any code conflicts.
+                        </li>
+                    </ul>
+                
+                    <h4>Testing and Debugging</h4>
+                    <ul>
+                        <li>
+                            Additionally, one of the crucial aspects of our development process was our commitment to deliver working and testable 
+                            features. Early on in our development process, we utilized <strong>JUnit</strong> for unit testing to make sure that individual classes, 
+                            and even the methods, work perfectly and seamlessly without its dependencies and to verify their correctness. This led 
+                            to us catching bugs and fatal errors before it gets implemented into our main branch. Furthermore, as our project continues 
+                            forward and scaled considerably, we began to utilize integration testing to further test each of the classes and methods 
+                            and verify its correctness between the seams of layers, especially the logic-to-persistence layer. This improved our confidence 
+                            that methods that are used are working seamlessly across each of the layers. Finally, we used <strong>Espresso</strong> to test our presentation 
+                            layer and do system/acceptance tests to verify that a feature is working as intended.Debugging was also used for the things that 
+                            we could not really anticipate in testing which allowed us to monitor and comprehensively track where things go wrong. Through 
+                            these tests, we have resolved major issues before they even get finalized, ensuring the application’s reliability and minimizing 
+                            unexpected fatal errors and issues.
+                        </li>
+                    </ul>
+                
+                    <h4>Scalable Database Implementation</h4>
+                    <ul>
+                        <li>
+                            Lastly, another contributor to the success of our application is the scalable implementation of our persistence layer. Ensuring 
+                            that this layer remains scalable is one of the most crucial aspects of our application as it grows and begins to implement more 
+                            features. Initially, we began to implement our persistence layer which uses only stubs, however, knowing that we would scale into 
+                            a working database, we carefully ensured that it will be easy to implement the <strong>HSQLDB</strong> implementation and in the future, if we use 
+                            another database, it is easily implemented through the use of interfaces. DSO (Domain-specific objects) models were also thoroughly 
+                            implemented to be scalable. This ensures that if we begin to add more attributes to an object, such as a recipe’s image, date added, 
+                            etc., they would be easily implemented through the use of an <strong>appropriate design pattern</strong>, such as what we did with our Recipe object 
+                            using a <strong>Builder design pattern</strong> . This allows for flexibility in the future without greatly refactoring our application as not only it 
+                            provided clear data management, but also made it easier to extend functionality.
+                        </li>
+                        <li>
+                            In conclusion, our structured approach to development, careful testing and debugging, and a scalable and maintainable persistence 
+                            layer were some of the notable aspects that contributed to our Reciply app’s success. By doing these approaches, we created a functional, 
+                            stable, and scalable application which provides a strong foundation for future enhancements and expansion.
+                        </li>
+
+                    </ul>
+                </article>
+                
+                <!-- Design Smells and Brilliant Decisions Section -->
+                <article id="design-decisions">
+                <h2>2. Design Smells and Brilliant Decisions</h2>
+
+                    <p>
+                        Throughout our development of this application, we have utilized some strong design choices that enhanced the maintainability and 
+                        extensibility of our application. However there also some code smells that, if left unaddressed, could hinder the development 
+                        process in the future as this develops further. 
+                    </p>
+
+                    <h3>Brilliant Design Decisions</h3>
+
+                    <p>One of the most important and clever aspects of our development process was the use of design patterns, which improves scalability, 
+                        flexibility, and maintainability. Here are some of the notable design patterns that were used throughout our development process:
+                    </p>
+                                    
+                    <h4>Effective use of design patterns</h4>
+                    <ul>
+                    <li>
+                        <strong>Adapter Pattern (UI Components):</strong> 
+                        <ul>
+                            <li>
+                                These are used to handle dynamic UI elements such as the RecyclerView from our main recipes homepage.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Builder Pattern (for Recipe DSO Model):</strong>
+                        <ul>
+                            <li>
+                                Since this is one of the most important objects in our application, this would be subjected to constant 
+                                changes and additionally key features that would be implemented
+                            </li>
+                            <li>
+                                This design pattern effectively allows for easily adding/deleting attributes for the recipe object without 
+                                the extensive use of constructor overloading.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Singleton Pattern (Persistence Objects Instances):</strong> 
+                        <ul>
+                            <li>
+                                To manage database interactions more efficiently
+                            </li>
+                            <li>
+                                This prevents unnecessary multiple database connections and ensures consistent data access across all 
+                                layers of the application.
+                            </li>
+                        </ul>
+                    </li>
+                    </ul>
+                
+                    <h3>Code Smells (To be improved in the future)</h3>
+                    <ul>
+                    <li>
+                        <strong>Lack of Code Documentation:</strong>
+                        <p>
+                            Perhaps one noticeable issue in our codebase is that some of the classes, and even methods, lack necessary 
+                            comments and documentation. This may raise concerns in the future as it would be difficult to read and follow 
+                            the codebase if perhaps another team would eventually handle this project. There were some instances where:
+                        </p>
+                        <ul>
+                            <li>
+                                Complex methods, such as in the business layer, lack necessary step-through comments to ensure that other 
+                                developers reading may follow along the logic.
+                            </li>
+                            <li>
+                                Responsibilities of classes are not documented properly, which would lead to unnecessary code being added 
+                                in the future that may violate the Single-responsibility principle, and other SOLID principles.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Hardcoded Strings:</strong> 
+                        <p>
+                            Another design issue was the excessive use of hardcoded strings, especially in the presentation and business layer. 
+                            Instead of using string resources that are particularly designed for these, such as the <strong>strings.xml</strong>, some parts contains:
+                        </p>
+                        <ul>
+                            <li>
+                                UI texts are hardcoded, making it difficult to be maintained and internationalized.
+                            </li>
+                            <li>
+                                Some error messages are hardcoded, instead of making them constant in a file (e.g. strings.xml)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Presence of Unused Code:</strong> 
+                        <p>
+                            While this perhaps may help in the future such that developers may not need to implement anymore, saving time, this 
+                            could lead to several issues such as creating confusion among future developers. Regularly refactoring and removing
+                            dead code ensures that the code is clean and easily maintained, using only necessary code that would be used.
+                        </p>
+                    </ul>
+                </article>
             </section>
         </main>
 
