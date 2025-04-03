@@ -112,6 +112,7 @@
   
   /* VIDEO */
   video {
+    height: 80vh;
     display: block;
     margin: 0 auto;
     border: 3px solid #cc4b37;
