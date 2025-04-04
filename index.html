@@ -81,17 +81,24 @@
 
             <h2>Intended Users</h3>
             <p>
-                Reciply is designed for food enthusiasts of all skill levels from home cooks looking for everyday 
-                inspiration to culinary adventurers eager to try global cuisines. Whether you're meal prepping, managing 
-                dietary preferences, or just exploring new ideas, Reciply supports your cooking journey.
+                Reciply is crafted for a diverse community of food enthusiasts, from busy home cooks and families preserving 
+                treasured recipes to adventurous culinary explorers and health-conscious individuals managing dietary needs. 
+                Whether you're an experienced chef or a beginner learning the ropes, Reciply provides an intuitive, inspiring 
+                platform tailored to every cooking journey.
             </p>
 
             <h2>Overview of Major Functionality</h3>
-            <p>
-                The app allows users to browse curated recipe collections, save personal favorites, customize dietary filters,
-                and share dishes with friends. Additional features include step-by-step instructions, ingredient substitution 
-                tips, and the ability to upload and organize personal recipes.
-            </p>
+                <p>
+                    Reciply delivers a robust suite of features designed to streamline and enhance your cooking experience:
+                </p>
+                <ul>
+                <li><strong>User Registration & Login:</strong> Secure, personalized access to manage your culinary profile.</li>
+                <li><strong>Recipe Management:</strong> Create, edit, view, and delete recipes for seamless organization and storage.</li>
+                <li><strong>Meal Planner:</strong> Schedule your weekly meals and effortlessly plan your culinary calendar.</li>
+                <li><strong>Shopping List Generation:</strong> Automatically generate shopping lists based on your selected recipes.</li>
+                <li><strong>Recipe Search:</strong> Easily search for existing recipes using powerful search functionality.</li>
+                <li><strong>Guided Cooking Instructions:</strong> Follow detailed, step-by-step instructions to bring your recipes to life.</li>
+                </ul>
             </section>
 
             <!-- SCREEN RECORDING SECTION -->
@@ -226,48 +233,48 @@
                     </p>
 
                     <h3>Brilliant Design Decisions</h3>
-
-                    <p>One of the most important and clever aspects of our development process was the use of design patterns, which improves scalability, 
-                        flexibility, and maintainability. Here are some of the notable design patterns that were used throughout our development process:
-                    </p>
-                                    
-                    <h4>Effective use of design patterns</h4>
                     <ul>
-                    <li>
-                        <strong>Adapter Pattern (UI Components):</strong> 
+                        <p>One of the most important and clever aspects of our development process was the use of design patterns, which improves scalability, 
+                            flexibility, and maintainability. Here are some of the notable design patterns that were used throughout our development process:
+                        </p>
+                                        
+                        <h4>Effective use of design patterns</h4>
                         <ul>
-                            <li>
-                                These are used to handle dynamic UI elements such as the RecyclerView from our main recipes homepage.
-                            </li>
+                        <li>
+                            <strong>Adapter Pattern (UI Components):</strong> 
+                            <ul>
+                                <li>
+                                    These are used to handle dynamic UI elements such as the RecyclerView from our main recipes homepage.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Builder Pattern (for Recipe DSO Model):</strong>
+                            <ul>
+                                <li>
+                                    Since this is one of the most important objects in our application, this would be subjected to constant 
+                                    changes and additionally key features that would be implemented
+                                </li>
+                                <li>
+                                    This design pattern effectively allows for easily adding/deleting attributes for the recipe object without 
+                                    the extensive use of constructor overloading.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Singleton Pattern (Persistence Objects Instances):</strong> 
+                            <ul>
+                                <li>
+                                    To manage database interactions more efficiently
+                                </li>
+                                <li>
+                                    This prevents unnecessary multiple database connections and ensures consistent data access across all 
+                                    layers of the application.
+                                </li>
+                            </ul>
+                        </li>
                         </ul>
-                    </li>
-                    <li>
-                        <strong>Builder Pattern (for Recipe DSO Model):</strong>
-                        <ul>
-                            <li>
-                                Since this is one of the most important objects in our application, this would be subjected to constant 
-                                changes and additionally key features that would be implemented
-                            </li>
-                            <li>
-                                This design pattern effectively allows for easily adding/deleting attributes for the recipe object without 
-                                the extensive use of constructor overloading.
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Singleton Pattern (Persistence Objects Instances):</strong> 
-                        <ul>
-                            <li>
-                                To manage database interactions more efficiently
-                            </li>
-                            <li>
-                                This prevents unnecessary multiple database connections and ensures consistent data access across all 
-                                layers of the application.
-                            </li>
-                        </ul>
-                    </li>
                     </ul>
-                
                     <h3>Code Smells (To be improved in the future)</h3>
                     <ul>
                     <li>
