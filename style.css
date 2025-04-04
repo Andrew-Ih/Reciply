@@ -96,9 +96,15 @@
   }
   
   /* TEAM SECTION */
-  .team {
+  /* .team {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+  } */
+
+  .team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   
@@ -108,6 +114,56 @@
     padding: 15px;
     border-radius: 6px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Tabs Container */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* --- Tab Buttons (Default) --- */
+  .tab-link {
+    background-color: #cc4b37;   /* Base color for unselected tabs */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;          /* Larger padding for bigger button size */
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  /* --- Hover Effect --- */
+  .tab-link:hover {
+    background-color: #ff8675;   /* Slightly lighter shade on hover */
+    transform: translateY(-2px);
+  }
+
+  /* --- Active (Selected) Tab Button --- */
+  .tab-link.active {
+    background-color: #444;      /* Dark grey to highlight selected tab */
+    color: #fff;
+    transform: none;            /* Remove hover lift on active tab */
+  }
+
+  /* --- Tab Content (Hidden by Default) --- */
+  .tab-content {
+    display: none;
+    background-color: #f2f2f2;   /* Slightly darker background for content area */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 2px solid transparent; /* Add a border for alignment */
+  }
+
+  /* --- Active Tab Content (Visible) --- */
+  .tab-content.active {
+    display: block;
+    border-color: #444;         /* Match the active tab's color for a clear visual link */
   }
   
   /* VIDEO */
