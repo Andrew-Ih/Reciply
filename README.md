@@ -3,6 +3,10 @@ _A smarter way to cook, plan, and share_
 
 ## View on web: https://andrew-ih.github.io/Reciply/
 
+## How to Run the Website
+- To run the website, simply open the folder which contains the index.html file and the other source files
+- Double click on the index.html file, or right click on it , then choose open with chrome.
+
 ## Purpose
 
 **Reciply** is a user-focused mobile app built to make cooking more enjoyable, less stressful, and beautifully organized. Whether you’re a beginner trying to follow your first recipe, a parent juggling meals for the week, or someone tracking your health goals, Reciply brings everything together in one place.
